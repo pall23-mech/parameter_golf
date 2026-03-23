@@ -3,7 +3,7 @@ Páll Rúnarsson ENG, Reasearcher at Reykjavík University
 I've built a working Parameter Golf pipeline (U-Net transformer + Muon optimizer + int6+QAT+zstd compression, 13.5× size reduction) and have results showing clear scaling on my RTX 5060 8GB:
 
 10M param model → 1.90 BPB (400 steps)
-22M param model → 1.508 BPB, 5.9GB VRAM used (card maxed out)
+22M param model → 1.508 BPB, 5.9GB VRAM used (card maxed out) (was 1.7bpb at 400 steps)
 
 The target config (MODEL_DIM=768, NUM_LAYERS=12, TRAIN_SEQ_LEN=2048, 20k steps) OOMs locally and would take ~16 hours anyway. The competition has a 10-minute wallclock cap — I need H200 throughput to compete.
 I request $500 in H200 credits to cover ~5–10 full competition runs. Pipeline is ready to go.
